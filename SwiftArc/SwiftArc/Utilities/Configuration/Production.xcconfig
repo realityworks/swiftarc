@@ -1,0 +1,30 @@
+//
+//  Production.xcconfig
+//
+//  Created by Piotr Suwara on 17/11/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Service URL
+SERVICE_ROOT_URL =
+
+// Site URL
+SITE_ROOT_URL = 
+
+// Notifications Connection String
+//NOTIFICATIONS_CONNECTION_STRING =
+
+// Notifications Hub Name
+//NOTIFICATIONS_HUB_NAME = default
+
+// App Settings
+APP_NAME =
+APP_BUNDLE_ID =
+
+DEBUG_UI_ENABLED = false
+
+USE_MOCK = false
+
+CONFIG_NAME = Production

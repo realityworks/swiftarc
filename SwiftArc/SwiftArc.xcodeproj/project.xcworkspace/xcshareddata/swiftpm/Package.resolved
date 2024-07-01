@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftarcstdlib",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:realityworks/swiftarcstdlib.git",
+      "state" : {
+        "revision" : "a34fd92aa3641383f5e5eefd6377f1e61bfb4840",
+        "version" : "0.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
