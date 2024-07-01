@@ -15,6 +15,8 @@
 		1D5268002C0858E300A569BC /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1D5267FA2C0858E300A569BC /* Production.xcconfig */; };
 		1D5268012C0858E300A569BC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5267FB2C0858E300A569BC /* Configuration.swift */; };
 		1D5268022C0858E300A569BC /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5267FC2C0858E300A569BC /* URLConstants.swift */; };
+		1D6E3C372C334E46008EAB4C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E3C352C334E46008EAB4C /* MainMenuView.swift */; };
+		1D6E3C382C334E46008EAB4C /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6E3C362C334E46008EAB4C /* MainMenuViewModel.swift */; };
 		1D7DFB8B2BE31FE700FEE0BD /* SwiftArc.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1D7DFB8A2BE31FE700FEE0BD /* SwiftArc.docc */; };
 		1D7DFB912BE31FE700FEE0BD /* SwiftArc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7DFB862BE31FE700FEE0BD /* SwiftArc.framework */; };
 		1D7DFB962BE31FE700FEE0BD /* SwiftArcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7DFB952BE31FE700FEE0BD /* SwiftArcTests.swift */; };
@@ -106,6 +108,8 @@
 		1D5267FA2C0858E300A569BC /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		1D5267FB2C0858E300A569BC /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		1D5267FC2C0858E300A569BC /* URLConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
+		1D6E3C352C334E46008EAB4C /* MainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		1D6E3C362C334E46008EAB4C /* MainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
 		1D7DFB862BE31FE700FEE0BD /* SwiftArc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftArc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D7DFB892BE31FE700FEE0BD /* SwiftArc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftArc.h; sourceTree = "<group>"; };
 		1D7DFB8A2BE31FE700FEE0BD /* SwiftArc.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = SwiftArc.docc; sourceTree = "<group>"; };
@@ -209,6 +213,23 @@
 				1D5267FC2C0858E300A569BC /* URLConstants.swift */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		1D6E3C332C334E46008EAB4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D6E3C342C334E46008EAB4C /* MainMenu */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D6E3C342C334E46008EAB4C /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1D6E3C352C334E46008EAB4C /* MainMenuView.swift */,
+				1D6E3C362C334E46008EAB4C /* MainMenuViewModel.swift */,
+			);
+			path = MainMenu;
 			sourceTree = "<group>";
 		};
 		1D7DFB7C2BE31FE700FEE0BD = {
@@ -320,6 +341,7 @@
 		1D7DFC352BE32EDF00FEE0BD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1D6E3C332C334E46008EAB4C /* Views */,
 				1DAC43D92C21613E00C99454 /* SharedComponents */,
 				1D7DFC5F2BE4598A00FEE0BD /* Extensions */,
 				1D7DFC572BE4596300FEE0BD /* ViewModel */,
@@ -665,6 +687,7 @@
 				1DAC44152C21613E00C99454 /* FadeGradientOverlay.swift in Sources */,
 				1D7DFC7E2BE45A1A00FEE0BD /* MockAuthenticationService.swift in Sources */,
 				1D7DFC662BE459BA00FEE0BD /* UINavigationBar+Extension.swift in Sources */,
+				1D6E3C382C334E46008EAB4C /* MainMenuViewModel.swift in Sources */,
 				1D7DFC2B2BE32E9400FEE0BD /* PublisherHelpers.swift in Sources */,
 				1DAC443F2C21613E00C99454 /* ActivityOverlay.swift in Sources */,
 				1D7DFC4C2BE32F1300FEE0BD /* AlertModel.swift in Sources */,
@@ -687,6 +710,7 @@
 				1D7DFC422BE32F0B00FEE0BD /* NavigationControl.swift in Sources */,
 				1D7DFC2C2BE32E9400FEE0BD /* NavigationUtil.swift in Sources */,
 				1D7DFC1E2BE3211D00FEE0BD /* DomainKey.swift in Sources */,
+				1D6E3C372C334E46008EAB4C /* MainMenuView.swift in Sources */,
 				1D7DFBD22BE3200400FEE0BD /* UseCaseBridge.swift in Sources */,
 				1D7DFC492BE32F1300FEE0BD /* AlertAction.swift in Sources */,
 				1D7DFC092BE320B000FEE0BD /* AppState.swift in Sources */,

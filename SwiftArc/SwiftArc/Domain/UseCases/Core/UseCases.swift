@@ -5,17 +5,18 @@
 import Foundation
 
 class UseCases {
+    static let shared: UseCases = {
+        UseCases()
+    }()
+
 
     private let useCaseContainer = UseCaseContainer()
-    private let stateController: GlobalStateController
+    private var stateController: GlobalStateController? = nil
 
-    init(stateController: GlobalStateController) {
-        // Initialise with live for main use environment
-        self.stateController = stateController
-    }
-
-    func configure() {
+    func configure(withStateController stateController: GlobalStateController) {
         registerUseCase(instance: AppStateUseCase(stateController: stateController))
+
+        self.stateController = stateController
     }
 
     func registerUseCase<T: UseCase>(instance: T) {
@@ -35,8 +36,8 @@ class UseCases {
 
 extension UseCases {
     static func instance(forStateController stateController: GlobalStateController) -> UseCases {
-        let useCases = UseCases(stateController: stateController)
-        useCases.configure()
+        let useCases = UseCases()
+        useCases.configure(withStateController: stateController)
         return useCases
     }
 }

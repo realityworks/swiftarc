@@ -18,7 +18,9 @@ class Domain {
     ) {
         DomainKey.initialise()
         self.stateController = dependencies.state
-        self.useCases = UseCases.instance(forStateController: dependencies.state)
+        self.useCases = dependencies.useCases
+
+        useCases.configure(withStateController: stateController)
     }
 
     func useCase<T: UseCase>(_ type: T.Type) -> T {
@@ -44,10 +46,12 @@ class Domain {
 extension Domain {
     struct Dependencies {
         let state: GlobalStateController
+        let useCases: UseCases
 
         static var shared: Dependencies {
             Dependencies(
-                state: GlobalStateController.shared
+                state: GlobalStateController.shared,
+                useCases: UseCases.shared
             )
         }
     }
