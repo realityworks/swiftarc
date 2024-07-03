@@ -4,4 +4,6 @@
 
 import Foundation
 
-protocol UseCaseState: Hashable & Equatable {}
+typealias Stateable = Hashable & Equatable
+
+protocol UseCaseState: Stateable {}

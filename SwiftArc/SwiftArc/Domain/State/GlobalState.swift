@@ -4,6 +4,6 @@
 
 import Foundation
 
-struct GlobalState: Equatable, Hashable {
+struct GlobalState: Stateable {
     var app: AppState = .init()
 }
