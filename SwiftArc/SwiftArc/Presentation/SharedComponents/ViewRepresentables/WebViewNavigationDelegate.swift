@@ -17,8 +17,7 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
         decidePolicyFor navigationAction: WKNavigationAction,
         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void
     ) {
-        let isProjecta = navigationAction.request.url?.absoluteString.contains("projecta.com.au")
-        decisionHandler(isProjecta == true ? .allow : .cancel)
+        decisionHandler(.allow)
     }
     
     func webView(

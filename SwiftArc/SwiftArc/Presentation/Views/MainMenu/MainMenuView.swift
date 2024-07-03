@@ -25,7 +25,7 @@ struct MainMenuView: View {
         .eraseToAnyPublisher()
 
     var model: MainMenuViewModel = .init(
-        dependencies: .init(appActive: appActivePublisher)
+        //dependencies: .init(appActive: appActivePublisher)
     )
 
     Task {
