@@ -30,11 +30,11 @@ struct MainMenuView: View {
 
     Task {
         // Do Async stuff
-        try? await Task.sleep(seconds: 1)
+        try? await Task.sleep(forSeconds: 1)
         appActiveSubject.value = true
-        try? await Task.sleep(seconds: 2)
+        try? await Task.sleep(forSeconds: 2)
         appActiveSubject.value = false
-        try? await Task.sleep(seconds: 1)
+        try? await Task.sleep(forSeconds: 1)
         appActiveSubject.value = true
     }
 

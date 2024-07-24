@@ -25,7 +25,7 @@ class MockAuthenticationService: AuthenticationService {
     }
     
     func login(with userName: String, _ password: String) async throws -> ActiveUser {
-        try await Task.sleep(seconds: 2)
+        try await Task.sleep(forSeconds: 2)
 
         let userData = allUsers.first(
             where: {
@@ -58,7 +58,7 @@ class MockAuthenticationService: AuthenticationService {
             throw AuthenticationError.accountFailedCreating
         }
         
-        try await Task.sleep(seconds: 2)
+        try await Task.sleep(forSeconds: 2)
 
         let activeUser = ActiveUser(name: name, email: userName)
         Self.write(activeUser: activeUser)
@@ -158,10 +158,10 @@ class MockAuthenticationService: AuthenticationService {
         from oldUserName: String,
         to newUserName: String
     ) async throws {
-        try? await Task.sleep(seconds: 2)
+        try? await Task.sleep(forSeconds: 2)
     }
 
     func resetPasswordRequest(for userName: String) async throws {
-        try await Task.sleep(seconds: 1)
+        try await Task.sleep(forSeconds: 1)
     }
 }

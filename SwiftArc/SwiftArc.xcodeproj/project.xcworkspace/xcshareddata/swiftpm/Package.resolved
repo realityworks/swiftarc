@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:realityworks/swiftarcstdlib.git",
       "state" : {
-        "revision" : "a34fd92aa3641383f5e5eefd6377f1e61bfb4840",
-        "version" : "0.0.2"
+        "revision" : "6f0eeb4ce911bfacd26434001fbb2b4f167e5b8b",
+        "version" : "1.0.4"
       }
     }
   ],

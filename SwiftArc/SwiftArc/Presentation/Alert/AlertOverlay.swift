@@ -122,11 +122,11 @@ struct AlertOverlay_Previews: PreviewProvider {
         .task {
             let firstState = AlertModel.blocking(withTitle: "First!", message: "Warning!")
             publisher.send(firstState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let delayedState = AlertModel.blocking(withTitle: "Delayed Number 1", message: "With message...")
             publisher.send(delayedState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let actionState = AlertModel.blocking(
                 withTitle: "Delayed Options Number 2",
@@ -137,18 +137,18 @@ struct AlertOverlay_Previews: PreviewProvider {
                 ]
             )
             publisher.send(actionState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let blockingToastState = AlertModel.blockingToast(withMessage: "Blocking toast")
             publisher.send(blockingToastState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let nonBlockingToastState = AlertModel.timedToast(
                 withMessage: "Non-Blocking toast",
                 interval: 4
             )
             publisher.send(nonBlockingToastState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let blockingState = AlertModel.blocking(
                 withTitle: "Delayed Options Number 3",
@@ -170,11 +170,11 @@ struct AlertOverlay_Previews: PreviewProvider {
         .task {
             let firstState = AlertModel.blockingToast(withMessage: "Blocking 1")
             publisher.send(firstState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let secondState = AlertModel.timedToast(withMessage: "Time Toast", interval: 5)
             publisher.send(secondState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let thirdState = AlertModel.blockingToast(withMessage: "Blocking 2")
             publisher.send(thirdState)
@@ -189,7 +189,7 @@ struct AlertOverlay_Previews: PreviewProvider {
         .task {
             let firstState = AlertModel.blockingToast(withMessage: "Blocking 1")
             publisher.send(firstState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let actionState = AlertModel.blocking(
                 withTitle: "Delayed Options Number 2",
@@ -200,15 +200,15 @@ struct AlertOverlay_Previews: PreviewProvider {
                 ]
             )
             publisher.send(actionState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let secondState = AlertModel.timedToast(withMessage: "Time Toast", interval: 5)
             publisher.send(secondState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let thirdState = AlertModel.blockingToast(withMessage: "Blocking 2")
             publisher.send(thirdState)
-            try? await Task.sleep(seconds: 2)
+            try? await Task.sleep(forSeconds: 2)
 
             let clearState = AlertModel.clearAllAlerts()
             publisher.send(clearState)

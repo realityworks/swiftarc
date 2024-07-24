@@ -50,7 +50,7 @@ class AlertOverlayManager: ObservableObject {
 
         Task {
             // Note, we have to sleep here otherwise the alert won't appear if two are present simultaneously.
-            try? await Task.sleep(seconds: 0.1)
+            try? await Task.sleep(forSeconds: 0.1)
             presentAlert(with: nextAlertModel)
         }
     }
@@ -68,7 +68,7 @@ class AlertOverlayManager: ObservableObject {
             showingAlert = true
         case let .timedToast(timeInterval):
             currentTimeToastTask = Task {
-                try? await Task.sleep(seconds: timeInterval)
+                try? await Task.sleep(forSeconds: timeInterval)
 
                 if !Task.isCancelled {
                     await dismiss()
